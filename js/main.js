@@ -187,3 +187,9 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+let root = document.documentElement;
+let count = 170
+setInterval(function(){
+    root.style.setProperty('--hue-color', `${count+=1}`)
+},100)
